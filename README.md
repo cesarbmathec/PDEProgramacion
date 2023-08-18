@@ -41,7 +41,8 @@ Síguenos en Twitter: https://twitter.com/PDEProgramacion
 
 ## Contacto
 
-Si tienes alguna pregunta o comentario, no dudes en contactarnos en [correo@example.com](mailto:correo@example.com) o a través de nuestras redes sociales.
+Si tienes alguna pregunta o comentario, no dudes en contactarnos en [correo@example.com](mailto:prodeprogramacion@gmail.com
+) o a través de nuestras redes sociales.
 
 ¡Diviértete explorando y aprendiendo a través de este repositorio!
 
