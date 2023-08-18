@@ -37,7 +37,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 
 ## Licencia
 
-Este repositorio está bajo la Licencia GNU. Consulta el archivo [LICENSE](/LICENSE) para obtener más detalles.
+Este repositorio está bajo la Licencia GNU GENERAL PUBLIC LICENSE. Consulta el archivo [LICENSE](/LICENSE) para obtener más detalles.
 
 ---
 
