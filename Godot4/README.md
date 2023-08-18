@@ -10,13 +10,16 @@ Este curso te guiará a través de la creación de un videojuego en 3D desde cer
 
 Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en este repositorio:
 
-1. [Práctica 1: Creación de un Personaje 3D](/Practica1/)
+1. [Práctica: Creación de un Personaje 3D]:
    - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe y animaciones en Blender y Mixamo.
-   - Archivos: [Archivo.blend](/Practica1/Archivo.blend), [Texturas](/Practica1/Texturas/), [Animaciones](/Practica1/Animaciones/).
+   - Archivo: [Player.blend](/Player.blend).
 
-2. [Práctica 2: Configuración de Cámara en Tercera Persona](/Practica2/)
-   - Descripción: Configuración de una cámara en tercera persona para seguir al personaje.
-   - Archivos: [Archivo.godot](/Practica2/Archivo.godot), [Scripts](/Practica2/Scripts/).
+   - Descripción: Exportar un personaje 3D en formato GLB para godot.
+   - Archivo: [Player.blend](/PlayerFinal.glb).
+
+2. [Práctica: Configuración de Cámara en Tercera Persona]:
+   - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
+   - Archivo: [CameraController.cs](/CameraController.cs).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
 
@@ -34,11 +37,11 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 
 ## Licencia
 
-Este repositorio está bajo la Licencia MIT. Consulta el archivo [LICENSE](/LICENSE) para obtener más detalles.
+Este repositorio está bajo la Licencia GNU. Consulta el archivo [LICENSE](/LICENSE) para obtener más detalles.
 
 ---
 
 **Curso "Crea tu Videojuego 3D desde Cero"**
-Sitio web: [www.tu-sitio-web.com](https://www.tu-sitio-web.com)
+Sitio web: [https://www.youtube.com/@pdeprogramacion/playlists](https://www.youtube.com/@pdeprogramacion/playlists)
 
 
