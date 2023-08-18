@@ -14,18 +14,18 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 
 1. [Práctica: Creación de un Personaje 3D]:
    - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe y animaciones en Blender y Mixamo.
-   - Archivo: [Player.blend](/Player.blend).
+   - Archivo: [Player.blend](/Godot4/Player.blend).
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
-   - Archivo: [PlayerFinal.glb](/PlayerFinal.glb).
+   - Archivo: [PlayerFinal.glb](/Godot4/PlayerFinal.glb).
      
 2. [Práctica: Creación de una plataforma simple]:
    - Descripción: Creamos una plataforma 3D simple, aqui os dejo las texturas utilizadas.
-   - Archivo: [grids.zip](/grids.zip).
+   - Archivo: [grids.zip](/Godot4/grids.zip).
 
 3. [Práctica: Configuración de Cámara en Tercera Persona]:
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
-   - Archivo: [CameraController.cs](/CameraController.cs).
+   - Archivo: [CameraController.cs](/Godot4/CameraController.cs).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
 
