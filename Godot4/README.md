@@ -1,6 +1,6 @@
 # Prácticas del Curso "Crea tu Videojuego 3D desde Cero" - Godot 4
 
-¡Bienvenido al repositorio de prácticas para el curso "Crea tu Videojuego 3D desde Cero"! En este repositorio encontrarás los archivos y recursos utilizados en las prácticas del curso, específicamente relacionados con el uso de Godot 4.
+¡Bienvenido al repositorio de prácticas para el curso "Crea tu Videojuego 3D desde Cero"! En este repositorio encontrarás los archivos y recursos utilizados en las prácticas del curso, específicamente relacionados con el uso de Godot 4, Blender, Mixamo, y ReadyPlayerMe.
 
 ## Acerca del Curso
 
