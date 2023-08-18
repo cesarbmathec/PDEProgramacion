@@ -1,47 +1,44 @@
-# Proyectos de Programación y Videojuegos - PDEProgramacion
+# Prácticas del Curso "Crea tu Videojuego 3D desde Cero" - Godot 4
 
-![Banner del Canal](banner.png)
+¡Bienvenido al repositorio de prácticas para el curso "Crea tu Videojuego 3D desde Cero"! En este repositorio encontrarás los archivos y recursos utilizados en las prácticas del curso, específicamente relacionados con el uso de Godot 4.
 
-¡Bienvenido al repositorio oficial de **PDEProgramacion**!
+## Acerca del Curso
 
-## Descripción
+Este curso te guiará a través de la creación de un videojuego en 3D desde cero, utilizando el motor de juego Godot 4. Cada práctica se centra en un aspecto específico del desarrollo de videojuegos, desde la creación de personajes hasta la implementación de mecánicas de juego y mucho más.
 
-Este repositorio acompaña a los contenidos de nuestro canal de YouTube, **PDEProgramacion**, donde exploramos el emocionante mundo de la programación y los videojuegos. Aquí encontrarás los recursos, códigos fuente y proyectos que presentamos en nuestros videos.
+## Prácticas Disponibles
 
-## Contenido
+Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en este repositorio:
 
+1. [Práctica 1: Creación de un Personaje 3D](/Practica1/)
+   - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe y animaciones en Blender y Mixamo.
+   - Archivos: [Archivo.blend](/Practica1/Archivo.blend), [Texturas](/Practica1/Texturas/), [Animaciones](/Practica1/Animaciones/).
 
-## Cómo Empezar
+2. [Práctica 2: Configuración de Cámara en Tercera Persona](/Practica2/)
+   - Descripción: Configuración de una cámara en tercera persona para seguir al personaje.
+   - Archivos: [Archivo.godot](/Practica2/Archivo.godot), [Scripts](/Practica2/Scripts/).
 
-1. Clona este repositorio en tu máquina local.
-2. Explora las carpetas de los proyectos para acceder al código fuente y recursos.
-3. Sigue las instrucciones en los README de los proyectos para configurar y ejecutar el código.
+¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
+
+## Instrucciones de Uso
+
+1. Clona o descarga este repositorio a tu máquina local.
+2. Navega a la práctica específica que deseas explorar.
+3. Encuentra los archivos, recursos y scripts relacionados con esa práctica.
+
+¡Disfruta explorando y aprendiendo con las prácticas de Godot 4 en este curso! Si tienes alguna pregunta o inquietud, no dudes en contactarnos.
 
 ## Contribuciones
 
-¡Tu contribución es bienvenida! Si deseas reportar problemas, mejoras o proponer nuevas ideas, por favor crea "issues". Si deseas contribuir con código, crea un "pull request" para que podamos revisar tus cambios.
+¡Las contribuciones son bienvenidas! Si tienes mejoras, correcciones o nuevas prácticas para agregar, no dudes en abrir una solicitud de pull.
 
-Si deseas contribuir con donaciones, aquí te dejamos los métodos:
+## Licencia
 
------------------------------------------------------------------------------------------------------------
-Para colaborar con el Canal:
-Binance: cesarbmath@gmail.com
-BTC, USDT, BNB (red BEP20): 0x32d030b187ff0333a69ab1cd648d7fecc18502b8
+Este repositorio está bajo la Licencia MIT. Consulta el archivo [LICENSE](/LICENSE) para obtener más detalles.
 
-BTC (red BTC):
-16D68khtJdUxbJVYSkpohux9iKKDD2LMWv
+---
 
-## Canal de YouTube
+**Curso "Crea tu Videojuego 3D desde Cero"**
+Sitio web: [www.tu-sitio-web.com](https://www.tu-sitio-web.com)
 
-¡No olvides visitar nuestro [Canal de YouTube](https://www.youtube.com/@pdeprogramacion) para ver nuestros videos y aprender más sobre programación y videojuegos!
-
-# Redes Sociales
-
-Síguenos en Twitter: https://twitter.com/PDEProgramacion
-
-## Contacto
-
-Si tienes alguna pregunta o comentario, no dudes en contactarnos en [correo@example.com](mailto:correo@example.com) o a través de nuestras redes sociales.
-
-¡Diviértete explorando y aprendiendo a través de este repositorio!
 
