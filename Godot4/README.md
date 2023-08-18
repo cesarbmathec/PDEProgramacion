@@ -18,7 +18,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
    - Archivo: [PlayerFinal.glb](/PlayerFinal.glb).
-   - 
+     
 2. [Práctica: Creación de una plataforma simple]:
    - Descripción: Creamos una plataforma 3D simple, aqui os dejo las texturas utilizadas.
    - Archivo: [grids.zip](/grids.zip).
