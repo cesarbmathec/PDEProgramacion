@@ -17,7 +17,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Player.blend](/Player.blend).
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
-   - Archivo: [Player.blend](/PlayerFinal.glb).
+   - Archivo: [PlayerFinal.glb](/PlayerFinal.glb).
 
 2. [Práctica: Configuración de Cámara en Tercera Persona]:
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
