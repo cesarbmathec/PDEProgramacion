@@ -26,6 +26,7 @@ Si deseas contribuir con donaciones, aquí te dejamos los métodos:
 Para colaborar con el Canal:
 
 Binance: cesarbmath@gmail.com
+
 BTC, USDT, BNB (red BEP20): 0x32d030b187ff0333a69ab1cd648d7fecc18502b8
 
 BTC (red BTC):
