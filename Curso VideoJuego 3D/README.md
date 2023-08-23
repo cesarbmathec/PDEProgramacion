@@ -13,17 +13,20 @@ Este curso te guiará a través de la creación de un videojuego en 3D desde cer
 Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en este repositorio:
 
 1. [Práctica: Creación de un Personaje 3D]:
-   - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe y animaciones en Blender y Mixamo.
+   - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe.
+   - Archivo: [Player.glb](/Godot4/Player.glb).
+     
+   - Descripción: Animaciones en Blender y Mixamo para nuestro personaje 3D.
    - Archivo: [Player.blend](/Godot4/Player.blend).
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
    - Archivo: [PlayerFinal.glb](/Godot4/PlayerFinal.glb).
      
-2. [Práctica: Creación de una plataforma simple]:
+3. [Práctica: Creación de una plataforma simple]:
    - Descripción: Creamos una plataforma 3D simple, aqui os dejo las texturas utilizadas.
    - Archivo: [grids.zip](/Godot4/grids.zip).
 
-3. [Práctica: Configuración de Cámara en Tercera Persona]:
+4. [Práctica: Configuración de Cámara en Tercera Persona]:
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
    - Archivo: [CameraController.cs](/Godot4/CameraController.cs).
 
