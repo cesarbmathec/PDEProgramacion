@@ -25,11 +25,11 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 3. [Práctica: Creación de una plataforma simple]:
    - Descripción: Creamos una plataforma 3D simple, aqui os dejo las texturas utilizadas.
    - Archivo: [grids.zip](/Godot4/grids.zip).
-
+     
 4. [Práctica: Configuración de Cámara en Tercera Persona]:
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
    - Archivo: [Player.cs](/Godot4/Player.cs).
-   - 
+     
 5. [Práctica: Player en Tercera Persona]:
    - Descripción: Configuración de un Personaje con animaciones y movimiento en tercera persona.
    - Archivo: [CameraController.cs](/Godot4/CameraController.cs).
