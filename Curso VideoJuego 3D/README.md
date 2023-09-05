@@ -17,22 +17,22 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Player.glb](/Curso%20VideoJuego%203D/Player.glb).
      
    - Descripción: Animaciones en Blender y Mixamo para nuestro personaje 3D.
-   - Archivo: [Player.blend.zip](Player.blend.zip).
+   - Archivo: [Player.blend.zip](/Curso%20VideoJuego%203D/Player.blend.zip).
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
-   - Archivo: [PlayerFinal.glb](PlayerFinal.glb).
+   - Archivo: [PlayerFinal.glb](/Curso%20VideoJuego%203D/PlayerFinal.glb).
      
 2. [Práctica: Creación de una plataforma simple]:
    - Descripción: Creamos una plataforma 3D simple, aqui os dejo las texturas utilizadas.
-   - Archivo: [grids.zip](grids.zip).
+   - Archivo: [grids.zip](/Curso%20VideoJuego%203D/grids.zip).
      
 3. [Práctica: Configuración de Cámara en Tercera Persona]:
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
-   - Archivo: [CameraController.cs](CameraController.cs).
+   - Archivo: [CameraController.cs](/Curso%20VideoJuego%203D/CameraController.cs).
      
 4. [Práctica: Player en Tercera Persona]:
    - Descripción: Configuración de un Personaje con animaciones y movimiento en tercera persona.
-   - Archivo: [Player.cs](Player.cs).
+   - Archivo: [Player.cs](/Curso%20VideoJuego%203D/Player.cs).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
 
