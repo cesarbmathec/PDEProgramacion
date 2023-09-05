@@ -17,7 +17,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Player.glb](/Godot4/Player.glb).
      
    - Descripción: Animaciones en Blender y Mixamo para nuestro personaje 3D.
-   - Archivo: [Player.blend](/Godot4/Player.blend).
+   - Archivo: [Player.blend.zip](/Godot4/Player.blend.zip).
 
    - Descripción: Exportar un personaje 3D en formato GLB para godot.
    - Archivo: [PlayerFinal.glb](/Godot4/PlayerFinal.glb).
