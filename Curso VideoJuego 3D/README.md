@@ -14,7 +14,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 
 1. [Práctica: Creación de un Personaje 3D]:
    - Descripción: Creación de un personaje 3D utilizando ReadyPlayerMe.
-   - Archivo: [Player.glb](Player.glb).
+   - Archivo: [Player.glb](/Curso%20VideoJuego%203D/Player.glb).
      
    - Descripción: Animaciones en Blender y Mixamo para nuestro personaje 3D.
    - Archivo: [Player.blend.zip](Player.blend.zip).
