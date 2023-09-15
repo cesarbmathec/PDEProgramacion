@@ -35,7 +35,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Player.cs](/Curso%20VideoJuego%203D/Player.cs).
      
 5. [Práctica: Cinemática Inversa]:
-   - Descripción: Arama utilizada en la práctica.
+   - Descripción: Arma utilizada en la práctica.
    - Archivo: [AK-47.glb](/Curso%20VideoJuego%203D/AK-47.glb).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
