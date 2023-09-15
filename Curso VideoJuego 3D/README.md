@@ -33,6 +33,10 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
 4. [Práctica: Player en Tercera Persona]:
    - Descripción: Configuración de un Personaje con animaciones y movimiento en tercera persona.
    - Archivo: [Player.cs](/Curso%20VideoJuego%203D/Player.cs).
+     
+5. [Práctica: Cinemática Inversa]:
+   - Descripción: Arama utilizada en la práctica.
+   - Archivo: [Player.cs](/Curso%20VideoJuego%203D/Player.cs).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
 
