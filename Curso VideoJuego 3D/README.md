@@ -19,7 +19,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Descripción: Animaciones en Blender y Mixamo para nuestro personaje 3D.
    - Archivo: [Player.blend.zip](/Curso%20VideoJuego%203D/Player.blend.zip).
 
-   - Descripción: Exportar un personaje 3D en formato GLB para godot.
+   - Descripción: Exportar un personaje 3D en formato GLB para godot (Con todas las animaciones utilizadas en el curso).
    - Archivo: [PlayerFinal.glb](/Curso%20VideoJuego%203D/PlayerFinal.glb).
      
 2. [Práctica: Creación de una plataforma simple]:
