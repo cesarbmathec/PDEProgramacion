@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 using System;
 
+[Obsolete]
 public partial class Player : CharacterBody3D
 {
 	[Export]
@@ -13,6 +14,11 @@ public partial class Player : CharacterBody3D
 	private AnimationTree animationTree;
 	private Vector2 newDir;
 	private bool aiming = false;
+
+	private Node3D origin;
+	private PackedScene bulletScene;
+	private float timeElapsed = 0f;
+	private Weapon weaponClass;
 
 	[Export]
 	public Node3D weapon;
@@ -32,6 +38,10 @@ public partial class Player : CharacterBody3D
 		lookAt = GetTree().GetNodesInGroup("CameraController")[0].GetNode<Node3D>("LookAt");
 		animationTree = GetNode<AnimationTree>("AnimationTree");
 		animationTree.Active = true;
+
+		weaponClass = GetNode<Weapon>("Weapon");
+		origin = GetNode<Node3D>("Weapon/Origin");
+		bulletScene = ResourceLoader.Load<PackedScene>("res://Scenes/Bullet.tscn");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -68,17 +78,6 @@ public partial class Player : CharacterBody3D
 			velocity.X = Mathf.Lerp(velocity.X, direction.X * Speed * (float)delta * 15f, 0.25f);
 			velocity.Z = Mathf.Lerp(velocity.Z, direction.Z * Speed * (float)delta * 15f, 0.25f);
 
-			lerpDirection = lerpDirection.Lerp(
-				new(
-					lookAt.GlobalPosition.X,
-					GlobalPosition.Y,
-					lookAt.GlobalPosition.Z
-				),
-				0.35f
-			);
-
-			LookAt(lerpDirection);
-
 			newDir = newDir.Lerp(new Vector2(inputDir.X, -inputDir.Y).Normalized(), 0.25f);
 		}
 		else
@@ -89,6 +88,17 @@ public partial class Player : CharacterBody3D
 			newDir = newDir.Lerp(Vector2.Zero, 0.25f);
 		}
 
+		lerpDirection = lerpDirection.Lerp(
+			new(
+				lookAt.GlobalPosition.X,
+				GlobalPosition.Y,
+				lookAt.GlobalPosition.Z
+			),
+			0.35f
+		);
+
+		LookAt(lerpDirection);
+
 		if (aiming)
 		{
 			animationTree.Set("parameters/TransitionStrafeAiming/transition_request", "aiming");
@@ -97,6 +107,18 @@ public partial class Player : CharacterBody3D
 			leftIK.Start();
 			rightIK.Start();
 			weapon.Visible = true;
+			if (Input.IsActionPressed("shoot") && timeElapsed > 0.15f)
+			{
+				//timeElapsed += (float)delta;
+				Shoot();
+				weaponClass.StartFiring();
+				timeElapsed = 0f;
+			}
+			else
+			{
+				timeElapsed += (float)delta;
+				weaponClass.StopFiring();
+			}
 		}
 		else
 		{
@@ -110,5 +132,16 @@ public partial class Player : CharacterBody3D
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	public void Shoot()
+	{
+		Area3D bullet = (Area3D)bulletScene.Instantiate();
+		weapon.AddChild(bullet);
+		if (origin != null)
+		{
+			bullet.GlobalTransform = origin.GlobalTransform;
+			bullet.Scale = Vector3.One * 0.8f;
+		}
 	}
 }
