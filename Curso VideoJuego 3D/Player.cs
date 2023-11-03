@@ -1,5 +1,4 @@
 using Godot;
-using Godot.Collections;
 using System;
 
 [Obsolete]
@@ -33,6 +32,8 @@ public partial class Player : CharacterBody3D
 
 	private Node3D lookAt;
 
+	private Control sight;
+
 	public override void _Ready()
 	{
 		lookAt = GetTree().GetNodesInGroup("CameraController")[0].GetNode<Node3D>("LookAt");
@@ -42,6 +43,9 @@ public partial class Player : CharacterBody3D
 		weaponClass = GetNode<Weapon>("Weapon");
 		origin = GetNode<Node3D>("Weapon/Origin");
 		bulletScene = ResourceLoader.Load<PackedScene>("res://Scenes/Bullet.tscn");
+		sight = GetNode<Control>("Control");
+
+		sight.Modulate = new Color(1f, 1f, 1f, 0.25f);
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -107,7 +111,8 @@ public partial class Player : CharacterBody3D
 			leftIK.Start();
 			rightIK.Start();
 			weapon.Visible = true;
-			if (Input.IsActionPressed("shoot") && timeElapsed > 0.15f)
+			sight.Visible = true;
+			if (Input.IsActionPressed("shoot") && timeElapsed > 0.1f)
 			{
 				//timeElapsed += (float)delta;
 				Shoot();
@@ -117,7 +122,8 @@ public partial class Player : CharacterBody3D
 			else
 			{
 				timeElapsed += (float)delta;
-				weaponClass.StopFiring();
+				if (timeElapsed > 0.1f)
+					weaponClass.StopFiring();
 			}
 		}
 		else
@@ -128,6 +134,7 @@ public partial class Player : CharacterBody3D
 			leftIK.Stop();
 			rightIK.Stop();
 			weapon.Visible = false;
+			sight.Visible = false;
 		}
 
 		Velocity = velocity;

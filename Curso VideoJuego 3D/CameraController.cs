@@ -37,15 +37,15 @@ public partial class CameraController : Node3D
 
 		// Capturamos el vector posición de las coord. del cursor
 		Vector2 mousePos = GetViewport().GetMousePosition();
-		if(camera != null)
+		if (camera != null)
 		{
 			// Proyectamos un rayo desde la camara
 			Vector3 rayOrigin = camera.ProjectRayOrigin(mousePos);
 			// Proyectamos el rayo con logitud de 45
 			Vector3 rayEnd = rayOrigin + camera.ProjectRayNormal(mousePos) * rayLength;
 			var query = PhysicsRayQueryParameters3D.Create(rayOrigin, rayEnd);
-			query.Exclude = new Godot.Collections.Array<Rid> { player.GetRid()};
-			if(weaponClass!= null)
+			query.Exclude = new Godot.Collections.Array<Rid> { player.GetRid() };
+			if (weaponClass != null)
 			{
 				weaponClass.lookAt = rayEnd;
 			}
