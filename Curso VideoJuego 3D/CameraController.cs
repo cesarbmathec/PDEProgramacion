@@ -1,10 +1,9 @@
 using Godot;
-using System;
+using Godot.Collections;
 
 public partial class CameraController : Node3D
 {
 	private CharacterBody3D player;
-
 	[Export]
 	public float SensitiveHorizontal = 0.01f;
 	[Export]
@@ -44,10 +43,20 @@ public partial class CameraController : Node3D
 			// Proyectamos el rayo con logitud de 45
 			Vector3 rayEnd = rayOrigin + camera.ProjectRayNormal(mousePos) * rayLength;
 			var query = PhysicsRayQueryParameters3D.Create(rayOrigin, rayEnd);
-			query.Exclude = new Godot.Collections.Array<Rid> { player.GetRid() };
+			query.Exclude = new Array<Rid> { player.GetRid() };
+
+			Dictionary collisionQuery = spaceState.IntersectRay(query);
+
+			Vector3 collisionPosition = rayEnd;
+
+			if (collisionQuery.Count > 0)
+			{
+				collisionPosition = (Vector3)collisionQuery["position"];
+			}
+
 			if (weaponClass != null)
 			{
-				weaponClass.lookAt = rayEnd;
+				weaponClass.lookAt = collisionPosition;
 			}
 		}
 

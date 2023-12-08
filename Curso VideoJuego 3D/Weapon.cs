@@ -12,7 +12,7 @@ public partial class Weapon : Node3D
 
 	public override void _Ready()
 	{
-		gpuParticles3D = GetNode<GpuParticles3D>("Origin/GPUParticles3D");
+		gpuParticles3D = GetNode<GpuParticles3D>("AK-47/Origin/GPUParticles3D");
 	}
 
 	public void StartFiring()

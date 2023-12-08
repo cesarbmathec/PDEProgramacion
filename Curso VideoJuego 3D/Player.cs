@@ -41,9 +41,9 @@ public partial class Player : CharacterBody3D
 		animationTree.Active = true;
 
 		weaponClass = GetNode<Weapon>("Weapon");
-		origin = GetNode<Node3D>("Weapon/Origin");
+		origin = GetNode<Node3D>("Weapon/AK-47/Origin");
 		bulletScene = ResourceLoader.Load<PackedScene>("res://Scenes/Bullet.tscn");
-		sight = GetNode<Control>("Control");
+		sight = GetNode<Control>("Sight");
 
 		sight.Modulate = new Color(1f, 1f, 1f, 0.25f);
 	}
