@@ -42,7 +42,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Descripción: Arma utilizada en la práctica.
    - Archivo: [AK-47.glb](/Curso%20VideoJuego%203D/AK-47.glb).
 
-6. [Práctica: Enemy:
+6. [Práctica: Enemy]:
    - Descripción: Modelo del enemigo con animaciones básicas.
    - Archivo: [Enemy.glb](/Curso%20VideoJuego%203D/Enemy.glb).
 
