@@ -37,6 +37,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Weapon.cs](/Curso%20VideoJuego%203D/Weapon.cs).
    - Archivo: [CameraController.cs](/Curso%20VideoJuego%203D/CameraController.cs).
    - Archivo: [Sight.cs](/Curso%20VideoJuego%203D/Sight.cs).
+   - Archivo: [EnemyController.cs](/Curso%20VideoJuego%203D/EnemyController.cs).
      
 5. [Práctica: Cinemática Inversa]:
    - Descripción: Arma utilizada en la práctica.
