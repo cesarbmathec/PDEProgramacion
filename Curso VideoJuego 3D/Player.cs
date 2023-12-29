@@ -9,6 +9,10 @@ public partial class Player : CharacterBody3D
 	[Export]
 	public float JumpVelocity = 4.5f;
 
+	[Export]
+	public float life = 20f;
+	private float initialLife;
+
 	private Vector3 lerpDirection;
 	private AnimationTree animationTree;
 	private Vector2 newDir;
@@ -18,6 +22,8 @@ public partial class Player : CharacterBody3D
 	private PackedScene bulletScene;
 	private float timeElapsed = 0f;
 	private Weapon weaponClass;
+
+	private Control infoBar;
 
 	[Export]
 	public Node3D weapon;
@@ -44,6 +50,9 @@ public partial class Player : CharacterBody3D
 		origin = GetNode<Node3D>("Weapon/AK-47/Origin");
 		bulletScene = ResourceLoader.Load<PackedScene>("res://Scenes/Bullet.tscn");
 		sight = GetNode<Control>("Sight");
+		infoBar = GetNode<Control>("Interface");
+
+		initialLife = life;
 
 		sight.Modulate = new Color(1f, 1f, 1f, 0.25f);
 	}
@@ -139,6 +148,15 @@ public partial class Player : CharacterBody3D
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	public override void _Process(double delta)
+	{
+		float x = life * 100 / initialLife;
+		// Modeficamos la barra de progreso
+		infoBar.GetNode<ProgressBar>("MarginContainer/VBoxContainer/Row1/ProgressBar").Value = x;
+		// Modificamos la información sobre la cantidad de vida restante
+		infoBar.GetNode<RichTextLabel>("MarginContainer/VBoxContainer/Row2/RichTextLabel3").Text = (int)x + "/100";
 	}
 
 	public void Shoot()
