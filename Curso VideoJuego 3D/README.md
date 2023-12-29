@@ -30,7 +30,7 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Descripción: Configuración de una cámara en tercera persona para seguir al personaje Script de la camara.
    - Archivo: [CameraController.cs](/Curso%20VideoJuego%203D/CameraController.cs).
      
-4. [Códigos: Player en Tercera Persona, Cámara, Arma, Mira, Balas, Enemy]:
+4. [Códigos: Player en Tercera Persona, Cámara, Arma, Mira, Balas]:
    - Descripción: Configuración de un Personaje con animaciones y movimiento en tercera persona.
    - Archivo: [Player.cs](/Curso%20VideoJuego%203D/Player.cs).
    - Archivo: [Bullet.cs](/Curso%20VideoJuego%203D/Bullet.cs).
