@@ -37,15 +37,20 @@ Aquí están las prácticas relacionadas con Godot 4 que puedes encontrar en est
    - Archivo: [Weapon.cs](/Curso%20VideoJuego%203D/Weapon.cs).
    - Archivo: [CameraController.cs](/Curso%20VideoJuego%203D/CameraController.cs).
    - Archivo: [Sight.cs](/Curso%20VideoJuego%203D/Sight.cs).
-   - Archivo: [EnemyController.cs](/Curso%20VideoJuego%203D/EnemyController.cs).
+   
      
 5. [Práctica: Cinemática Inversa]:
    - Descripción: Arma utilizada en la práctica.
    - Archivo: [AK-47.glb](/Curso%20VideoJuego%203D/AK-47.glb).
 
-6. [Práctica: Enemy]:
+6. [Práctica: Modelo Enemy]:
    - Descripción: Modelo del enemigo con animaciones básicas.
    - Archivo: [Enemy.glb](/Curso%20VideoJuego%203D/Enemy.glb).
+7. [Práctica: Inteligencia Artificial del Enemigo]:
+   - Descripción: Códigos de la IA del enemigo.
+   - Archivo: [EnemyController.cs](/Curso%20VideoJuego%203D/EnemyController.cs).
+   - Archivo: [AuxiliaryMethods.cs](/Curso%20VideoJuego%203D/AuxiliaryMethods.cs).
+   - Archivo: [StateMethods.cs](/Curso%20VideoJuego%203D/StateMethods.cs).
 
 ¡Explora cada práctica para obtener más detalles y acceder a los archivos correspondientes!
 
