@@ -50,6 +50,7 @@ namespace TutorialGame
         {
             // Color ?
             SetColor(new Color(1, 1, 0));
+
             // Detenemos al enemigo para que entre en el estado alerta
             StopAgent();
 
@@ -60,6 +61,7 @@ namespace TutorialGame
             // Si pasado algún tiempo no encontramos al enemigo, entremos al estado patrulla
             if (timeElapsed >= searchTime)
             {
+                // Entramos al estado Patrulla
                 currentState = EnemyState.PATROL;
                 timeElapsed = 0f;
                 return;
@@ -112,10 +114,13 @@ namespace TutorialGame
             animationTree.Set("parameters/conditions/attack", false);
         }
 
+
+
         public void AttackState()
         {
             // Color rojo
             SetColor(new Color(1, 0, 0));
+
             // Quitamos vida al player
             var pl = (Player)player;
             pl.life -= 0.1f;
@@ -123,6 +128,7 @@ namespace TutorialGame
             // Verificamos si nos hemos alejado para entrar a persecución
             if (distance > 1.5f)
             {
+                // Estado persecución
                 currentState = EnemyState.PURSUIT;
                 return;
             }
@@ -132,5 +138,8 @@ namespace TutorialGame
             animationTree.Set("parameters/conditions/running", false);
             animationTree.Set("parameters/conditions/attack", true);
         }
+
+        
+
     }
 }
