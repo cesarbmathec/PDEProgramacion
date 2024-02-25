@@ -80,8 +80,8 @@ func _physics_process(delta):
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-		velocity.z = move_toward(velocity.z, 0, speed)
+		velocity.x = move_toward(velocity.x, 0, speed * 0.1)
+		velocity.z = move_toward(velocity.z, 0, speed * 0.1)
 
 	move_and_slide()
 	cam_tilt(input_dir.x, delta)
