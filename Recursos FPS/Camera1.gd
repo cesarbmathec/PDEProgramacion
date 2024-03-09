@@ -1,5 +1,5 @@
 extends Camera3D
-class_name ChameraShake
+class_name CameraShake
 
 # Variable para controlar el trauma
 @export var trauma: float = 5

@@ -9,6 +9,7 @@ extends CharacterBody3D
 @export var cam_speed: float = 1
 @export var cam_rotation_amount: float = 1
 @export var camera: Camera3D
+@export var camera_shake: CameraShake
 
 @export_group("Weapon")
 @export var weapon_holder: Node3D
@@ -16,6 +17,9 @@ extends CharacterBody3D
 @export var weapon_sway_amount: float = 1
 @export var wobble_amount: float = 1
 @export var wobble_freq: float = 1
+
+@onready var hand_at: AnimationTree = $CameraController/WeaponHolder/Hands/Hands/HandAnimationTree
+@onready var ak47_at: AnimationTree = $CameraController/WeaponHolder/Hands/Gun/AK47AnimationTree
 
 var mouse_input: Vector2
 var weapon_holder_pos: Vector3
@@ -26,7 +30,7 @@ enum player_state {
 	RELOAD,
 }
 
-var Current_state: player_state = player_state.IDLE
+var current_state: player_state = player_state.IDLE
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -54,7 +58,7 @@ func _input(event):
 
 
 func _process(delta):
-	match Current_state:
+	match current_state:
 		player_state.IDLE:
 			idle()
 		player_state.FIRE:
@@ -121,14 +125,57 @@ func weapon_wobble(vel: float, delta):
 			weapon_holder.position.x = lerp(weapon_holder.position.x, weapon_holder_pos.x, 10 * delta)
 
 
+func set_animation(path: String, value: bool):
+	hand_at.set(path, value)
+	ak47_at.set(path, value)
+
+
 # Métodos para controlar los estados del player
 func idle():
-	pass
+	# Cambiamos al estado FIRE
+	if Input.is_action_pressed("fire"):
+		current_state = player_state.FIRE
+		return
+
+	# Cambiamos al estado RELOAD
+	if Input.is_action_pressed("reload"):
+		current_state = player_state.RELOAD
+		return
+
+	# Establecemos las animaciones
+	set_animation("parameters/conditions/idle", true)
+	set_animation("parameters/conditions/fire", false)
+	set_animation("parameters/conditions/reload", false)
 
 
 func fire(_delta):
-	pass
+	# Vibración de la cámara
+	camera_shake.add_trauma(0.75)
+
+	# Cambiamos al estado IDLE
+	if !Input.is_action_pressed("fire"):
+		current_state = player_state.IDLE
+		return
+
+	# Cambiamos al estado RELOAD
+	if Input.is_action_pressed("reload"):
+		current_state = player_state.RELOAD
+		return
+
+	# Establecemos las animaciones
+	set_animation("parameters/conditions/idle", false)
+	set_animation("parameters/conditions/fire", true)
+	set_animation("parameters/conditions/reload", false)
 
 
 func reload():
-	pass
+	# Establecemos las animaciones
+	set_animation("parameters/conditions/idle", false)
+	set_animation("parameters/conditions/fire", false)
+	set_animation("parameters/conditions/reload", true)
+
+
+func _on_animation_finished(anim_name: StringName):
+	if anim_name == "FP_reload":
+		current_state = player_state.IDLE
+		set_animation("parameters/conditions/reload", false)
