@@ -18,10 +18,32 @@ class_name CameraShake
 var time: float = 0
 
 @onready var initial_rotation: Vector3 = rotation_degrees as Vector3
+@export var weaponHolder: Node3D
+
+@export var textureRect1: TextureRect
+@export var textureRect2: TextureRect
 
 
 func _ready():
 	make_current()
+	textureRect1.visible = true
+
+
+func _process(delta):
+	if Input.is_action_pressed("zoom"):
+		position.z = lerp(position.z, -1.0, delta * 20)
+		fov = lerp(fov, 15.0, delta * 20)
+		textureRect1.visible = false
+		textureRect2.visible = true
+		textureRect2.rotation = lerp(textureRect2.rotation, 0.0, delta * 20)
+		weaponHolder.position.x = lerp(weaponHolder.position.x, -0.40, delta * 20)
+	else:
+		position.z = lerp(position.z, 0.0, delta * 20)
+		fov = lerp(fov, 75.0, delta * 20)
+		textureRect1.visible = true
+		textureRect2.visible = false
+		textureRect2.rotation = lerp(textureRect2.rotation, PI / 3, delta * 20)
+		weaponHolder.position.x = lerp(weaponHolder.position.x, 0.0, delta * 20)
 
 
 func _physics_process(delta):

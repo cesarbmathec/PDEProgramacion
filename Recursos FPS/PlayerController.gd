@@ -17,9 +17,12 @@ extends CharacterBody3D
 @export var weapon_sway_amount: float = 1
 @export var wobble_amount: float = 1
 @export var wobble_freq: float = 1
+# Variable para instanciar la bala en la Escena
+@export var bullet_scene: PackedScene
 
-@onready var hand_at: AnimationTree = $CameraController/WeaponHolder/Hands/Hands/HandAnimationTree
-@onready var ak47_at: AnimationTree = $CameraController/WeaponHolder/Hands/Gun/AK47AnimationTree
+@onready var origin_fire: Node3D = $CameraController/WeaponHolder/PLA/PLA/Origin
+@onready var hand_at: AnimationTree = $CameraController/WeaponHolder/PLA/HandsAnimationTree
+@onready var rifle_at: AnimationTree = $CameraController/WeaponHolder/PLA/PLA/RifleAnimationTree
 
 var mouse_input: Vector2
 var weapon_holder_pos: Vector3
@@ -35,6 +38,14 @@ var current_state: player_state = player_state.IDLE
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+# Longitud del rayo
+var RAY_LENGTH: float = 4000
+# Posición de la colisión del rayo
+var position_collision: Vector3
+
+# Controlamos el tiempo transcurrido
+var time_elapsed: float = 0
+
 
 # Inicialización
 func _ready():
@@ -44,6 +55,10 @@ func _ready():
 	# Capturamos la posición del porta armas
 	if weapon_holder:
 		weapon_holder_pos = weapon_holder.position
+
+	# Activamos los AnimationTree
+	hand_at.active = true
+	rifle_at.active = true
 
 
 # Entradas
@@ -68,6 +83,25 @@ func _process(delta):
 
 
 func _physics_process(delta):
+	# Raycast
+	var space_state: PhysicsDirectSpaceState3D = get_world_3d().direct_space_state
+	var mousepos: Vector2 = get_viewport().get_mouse_position()
+
+	var origin: Vector3 = camera.project_ray_origin(mousepos)
+	var end: Vector3 = origin + camera.project_ray_normal(mousepos) * RAY_LENGTH
+
+	var query: PhysicsRayQueryParameters3D = PhysicsRayQueryParameters3D.create(origin, end)
+
+	query.collide_with_areas = true
+	query.exclude = [self]
+
+	var result: Dictionary = space_state.intersect_ray(query)
+
+	position_collision = end
+
+	if result:
+		position_collision = result["position"]
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -127,7 +161,7 @@ func weapon_wobble(vel: float, delta):
 
 func set_animation(path: String, value: bool):
 	hand_at.set(path, value)
-	ak47_at.set(path, value)
+	rifle_at.set(path, value)
 
 
 # Métodos para controlar los estados del player
@@ -148,9 +182,23 @@ func idle():
 	set_animation("parameters/conditions/reload", false)
 
 
-func fire(_delta):
+func shoot():
+	var bullet: Area3D = bullet_scene.instantiate()
+	add_child(bullet)
+	bullet.global_transform = origin_fire.global_transform
+	bullet.scale = Vector3.ONE * 0.8
+	origin_fire.look_at(position_collision)
+
+
+func fire(delta):
 	# Vibración de la cámara
 	camera_shake.add_trauma(0.75)
+
+	if time_elapsed > 0.1:
+		shoot()
+		time_elapsed = 0
+	else:
+		time_elapsed += delta
 
 	# Cambiamos al estado IDLE
 	if !Input.is_action_pressed("fire"):
@@ -176,6 +224,6 @@ func reload():
 
 
 func _on_animation_finished(anim_name: StringName):
-	if anim_name == "FP_reload":
+	if anim_name == "Arms_Reload":
 		current_state = player_state.IDLE
 		set_animation("parameters/conditions/reload", false)
